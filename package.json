@@ -21,8 +21,10 @@
   },
   "homepage": "https://github.com/adzapol/Porten_03#readme",
   "devDependencies": {
-    "browser-sync": "^2.26.12",
+    "browser-sync": "^2.26.13",
     "gulp": "^4.0.2",
+    "gulp-html-rebuild": "0.0.4",
     "gulp-sass": "^4.1.0"
-  }
+  },
+  "dependencies": {}
 }
