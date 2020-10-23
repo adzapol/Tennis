@@ -933,13 +933,353 @@ h2 {
     background-size: cover;
 }
 .footer-body {
+    display: flex;
+    flex-direction: column;
     margin-top: 100px;
-    min-height: 700px;
+    &-social {
+        display: flex;
+        font-size: 24px;
+        color: $color-white;
+        &-icon {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-basis: 50%;
+            padding-top: 40px;
+            padding-bottom: 40px;
+            border-right: 3px solid $color-brand;
+            border-bottom: 3px solid $color-brand;
+            &__item {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 54px;
+                height: 54px;
+                margin-left: 10px;
+                background-color: $color-brand;
+                &--facebook {
+                    display: block;
+                    width: 32px;
+                    height: 32px;
+                    background: url(../img/facebook-white.svg) 100% 100% no-repeat;
+                    background-size: contain;
+                }
+                &--twitter {
+                    display: block;
+                    width: 32px;
+                    height: 32px;
+                    background: url(../img/twitter-white.svg) 100% 100% no-repeat;
+                    background-size: contain;
+                }
+                &--youtube {
+                    display: block;
+                    width: 32px;
+                    height: 32px;
+                    background: url(../img/youtube-white.svg) 100% 100% no-repeat;
+                    background-size: contain;
+                }
+                &--inst {
+                    display: block;
+                    width: 32px;
+                    height: 32px;
+                    background: url(../img/inst-white.svg) 100% 100% no-repeat;
+                    background-size: contain;
+                }
+            }
+            &__item:hover {
+                background-color: $color-white;
+                .footer-body-social-icon__item--facebook {
+                    background-image: url(../img/facebook-brand.svg);
+                }
+                .footer-body-social-icon__item--twitter {
+                    background-image: url(../img/twitter-brand.svg);
+                }
+                .footer-body-social-icon__item--youtube {
+                    background-image: url(../img/youtube-brand.svg);
+                }
+                .footer-body-social-icon__item--inst {
+                    background-image: url(../img/inst-brand.svg);
+                }
+
+            }
+            &__item:last-child {
+                margin-right: 20px;
+            }
+        }
+        &-email {
+            flex-basis: 50%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border-bottom: 3px solid $color-brand;
+            &__input {
+                font-size: 16px;
+                padding: 17px 17px;
+                max-width: 200px;
+            }
+            &__button {
+                font-size: 18px;
+                padding: 15px 15px;
+                border-radius: 0;
+            }
+        }
+    }
+    &-logo {
+        text-align: center;
+        padding: 40px 0 40px 0;
+    }
+    &__title {
+        font-size: 24px;
+        margin-bottom: 40px;
+        color: $color-white;
+    }
+    &__subtitle {
+        font-size: 18px;
+        color: $color-link;
+    }
+    &__subtitle:hover {
+        color: $color-white;
+    }
+    &__place {
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+    &-container {
+        flex-grow: 1;
+        display: flex;
+        justify-content: space-around;
+        &-address {
+            flex-basis: 35%;
+            &-place {
+                &__icon {
+                    display: block;
+                    width: 32px;
+                    height: 42px;
+                    margin-right: 10px;
+                    background: url(../img/address.svg) 100% 100% no-repeat;
+                    background-size: cover;
+                }
+            }
+        }
+        &-training {
+            flex-basis: 35%;
+            &-place {
+                &__icon {
+                    display: block;
+                    width: 42px;
+                    height: 42px;
+                    margin-right: 10px;
+                    background: url(../img/t-ball.svg) 100% 100% no-repeat;
+                    background-size: cover;
+                }
+            }
+        }
+        &-academy {
+            flex-basis: 35%;
+            &__subtitle {
+                margin-bottom: 40px;
+            }
+            &-place {
+                &__icon--address {
+                    width: 32px;
+                    height: 42px;
+                    margin-right: 10px;
+                    background: url(../img/address.svg) 100% 100% no-repeat;
+                    background-size: cover;
+                }
+                &__icon--email {
+                    align-self: flex-start;
+                    width: 32px;
+                    height: 22px;
+                    margin-right: 10px;
+                    background: url(../img/email.svg) 100% 100% no-repeat;
+                    background-size: contain;
+                }
+                &__icon--phone {
+                    width: 32px;
+                    height: 42px;
+                    margin-right: 10px;
+                    background: url(../img/phone.svg) 100% 100% no-repeat;
+                    background-size: contain;
+                }
+            }
+        }
+    }
 }
-
-
-
-
+@media (max-width: $screen-lg) { // 992px
+    .footer-body {
+        &-social {
+            font-size: 14px;
+            &-icon {
+                padding-top: 20px;
+                padding-bottom: 20px;
+                &__item:last-child {
+                    margin-right: 10px;
+                }
+            }
+            &-email {
+                justify-content: space-around;
+                &__input {
+                    font-size: 10px;
+                    max-width: 120px;
+                }
+                &__button {
+                    font-size: 12px;
+                }
+            }
+        }
+        &-logo {
+            padding: 20px 0 20px 0;
+        }
+        &__title {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        &__subtitle {
+            font-size: 12px;
+        }
+        &__place {
+            margin-bottom: 20px;
+        }
+        &-container {
+            &-address {
+                &-place {
+                    &__icon {
+                        width: 22px;
+                        height: 32px;
+                        background-size: contain;
+                    }
+                }
+            }
+            &-training {
+                &-place {
+                    &__icon {
+                        width: 32px;
+                        height: 32px;
+                        background-size: contain;
+                    }
+                }
+            }
+            &-academy {
+                &__subtitle {
+                    margin-bottom: 20px;
+                }
+                &-place {
+                    &__icon--address {
+                        width: 22px;
+                        height: 32px;
+                        background-size: contain;
+                    }
+                    &__icon--email {
+                        width: 22px;
+                        height: 12px;
+                        background-size: contain;
+                    }
+                    &__icon--phone {
+                        width: 22px;
+                        height: 32px;
+                        background-size: contain;
+                    }
+                }
+            }
+        }
+    }  
+}
+@media (max-width: $screen-md) { // 768px
+    .footer-body {
+        margin-top: 50px;
+        &-social {
+            flex-direction: column;
+            font-size: 14px;
+            &-icon {                
+                padding-top: 20px;
+                padding-bottom: 20px;
+                border: none;
+                margin-bottom: 10px;
+                &__item:last-child {
+                    margin-right: 0;
+                }
+            }
+            &-email {
+                border: none;
+                justify-content: space-around;
+                &__input {
+                    font-size: 10px;
+                    max-width: 120px;
+                }
+                &__button {
+                    font-size: 12px;
+                }
+            }
+        }
+        &-logo {
+            padding: 20px 0 20px 0;
+        }
+        &__title {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        &__subtitle {
+            font-size: 12px;
+        }
+        &__place {
+            margin-bottom: 20px;
+        }
+        &-container {
+            flex-direction: column;
+            align-items: center;
+            &-address {
+                &-place {
+                    &__icon {
+                        width: 22px;
+                        height: 32px;
+                        background-size: contain;
+                    }
+                }
+            }
+            &-training {
+                &-place {
+                    &__icon {
+                        width: 32px;
+                        height: 32px;
+                        background-size: contain;
+                    }
+                }
+            }
+            &-academy {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                &__subtitle {
+                    text-align: center;
+                    max-width: 250px;
+                    margin-bottom: 20px;
+                }
+                &-place {
+                    display: flex;
+                    justify-content: flex-start;
+                    &__icon--address {
+                        width: 22px;
+                        height: 32px;
+                        background-size: contain;
+                    }
+                    &__icon--email {
+                        width: 22px;
+                        height: 12px;
+                        background-size: contain;
+                    }
+                    &__icon--phone {
+                        width: 22px;
+                        height: 32px;
+                        background-size: contain;
+                    }
+                }
+            }
+        }
+    } 
+}
 
 
 

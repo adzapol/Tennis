@@ -1000,8 +1000,254 @@ h2 {
   background-size: cover; }
 
 .footer-body {
-  margin-top: 100px;
-  min-height: 700px; }
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px; }
+  .footer-body-social {
+    display: flex;
+    font-size: 24px;
+    color: #fff; }
+    .footer-body-social-icon {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-basis: 50%;
+      padding-top: 40px;
+      padding-bottom: 40px;
+      border-right: 3px solid #004F9D;
+      border-bottom: 3px solid #004F9D; }
+      .footer-body-social-icon__item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 54px;
+        height: 54px;
+        margin-left: 10px;
+        background-color: #004F9D; }
+        .footer-body-social-icon__item--facebook {
+          display: block;
+          width: 32px;
+          height: 32px;
+          background: url(../img/facebook-white.svg) 100% 100% no-repeat;
+          background-size: contain; }
+        .footer-body-social-icon__item--twitter {
+          display: block;
+          width: 32px;
+          height: 32px;
+          background: url(../img/twitter-white.svg) 100% 100% no-repeat;
+          background-size: contain; }
+        .footer-body-social-icon__item--youtube {
+          display: block;
+          width: 32px;
+          height: 32px;
+          background: url(../img/youtube-white.svg) 100% 100% no-repeat;
+          background-size: contain; }
+        .footer-body-social-icon__item--inst {
+          display: block;
+          width: 32px;
+          height: 32px;
+          background: url(../img/inst-white.svg) 100% 100% no-repeat;
+          background-size: contain; }
+      .footer-body-social-icon__item:hover {
+        background-color: #fff; }
+        .footer-body-social-icon__item:hover .footer-body-social-icon__item--facebook {
+          background-image: url(../img/facebook-brand.svg); }
+        .footer-body-social-icon__item:hover .footer-body-social-icon__item--twitter {
+          background-image: url(../img/twitter-brand.svg); }
+        .footer-body-social-icon__item:hover .footer-body-social-icon__item--youtube {
+          background-image: url(../img/youtube-brand.svg); }
+        .footer-body-social-icon__item:hover .footer-body-social-icon__item--inst {
+          background-image: url(../img/inst-brand.svg); }
+      .footer-body-social-icon__item:last-child {
+        margin-right: 20px; }
+    .footer-body-social-email {
+      flex-basis: 50%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      border-bottom: 3px solid #004F9D; }
+      .footer-body-social-email__input {
+        font-size: 16px;
+        padding: 17px 17px;
+        max-width: 200px; }
+      .footer-body-social-email__button {
+        font-size: 18px;
+        padding: 15px 15px;
+        border-radius: 0; }
+  .footer-body-logo {
+    text-align: center;
+    padding: 40px 0 40px 0; }
+  .footer-body__title {
+    font-size: 24px;
+    margin-bottom: 40px;
+    color: #fff; }
+  .footer-body__subtitle {
+    font-size: 18px;
+    color: #707070; }
+  .footer-body__subtitle:hover {
+    color: #fff; }
+  .footer-body__place {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px; }
+  .footer-body-container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-around; }
+    .footer-body-container-address {
+      flex-basis: 35%; }
+      .footer-body-container-address-place__icon {
+        display: block;
+        width: 32px;
+        height: 42px;
+        margin-right: 10px;
+        background: url(../img/address.svg) 100% 100% no-repeat;
+        background-size: cover; }
+    .footer-body-container-training {
+      flex-basis: 35%; }
+      .footer-body-container-training-place__icon {
+        display: block;
+        width: 42px;
+        height: 42px;
+        margin-right: 10px;
+        background: url(../img/t-ball.svg) 100% 100% no-repeat;
+        background-size: cover; }
+    .footer-body-container-academy {
+      flex-basis: 35%; }
+      .footer-body-container-academy__subtitle {
+        margin-bottom: 40px; }
+      .footer-body-container-academy-place__icon--address {
+        width: 32px;
+        height: 42px;
+        margin-right: 10px;
+        background: url(../img/address.svg) 100% 100% no-repeat;
+        background-size: cover; }
+      .footer-body-container-academy-place__icon--email {
+        align-self: flex-start;
+        width: 32px;
+        height: 22px;
+        margin-right: 10px;
+        background: url(../img/email.svg) 100% 100% no-repeat;
+        background-size: contain; }
+      .footer-body-container-academy-place__icon--phone {
+        width: 32px;
+        height: 42px;
+        margin-right: 10px;
+        background: url(../img/phone.svg) 100% 100% no-repeat;
+        background-size: contain; }
+
+@media (max-width: 992px) {
+  .footer-body-social {
+    font-size: 14px; }
+    .footer-body-social-icon {
+      padding-top: 20px;
+      padding-bottom: 20px; }
+      .footer-body-social-icon__item:last-child {
+        margin-right: 10px; }
+    .footer-body-social-email {
+      justify-content: space-around; }
+      .footer-body-social-email__input {
+        font-size: 10px;
+        max-width: 120px; }
+      .footer-body-social-email__button {
+        font-size: 12px; }
+  .footer-body-logo {
+    padding: 20px 0 20px 0; }
+  .footer-body__title {
+    font-size: 18px;
+    margin-bottom: 20px; }
+  .footer-body__subtitle {
+    font-size: 12px; }
+  .footer-body__place {
+    margin-bottom: 20px; }
+  .footer-body-container-address-place__icon {
+    width: 22px;
+    height: 32px;
+    background-size: contain; }
+  .footer-body-container-training-place__icon {
+    width: 32px;
+    height: 32px;
+    background-size: contain; }
+  .footer-body-container-academy__subtitle {
+    margin-bottom: 20px; }
+  .footer-body-container-academy-place__icon--address {
+    width: 22px;
+    height: 32px;
+    background-size: contain; }
+  .footer-body-container-academy-place__icon--email {
+    width: 22px;
+    height: 12px;
+    background-size: contain; }
+  .footer-body-container-academy-place__icon--phone {
+    width: 22px;
+    height: 32px;
+    background-size: contain; } }
+
+@media (max-width: 768px) {
+  .footer-body {
+    margin-top: 50px; }
+    .footer-body-social {
+      flex-direction: column;
+      font-size: 14px; }
+      .footer-body-social-icon {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border: none;
+        margin-bottom: 10px; }
+        .footer-body-social-icon__item:last-child {
+          margin-right: 0; }
+      .footer-body-social-email {
+        border: none;
+        justify-content: space-around; }
+        .footer-body-social-email__input {
+          font-size: 10px;
+          max-width: 120px; }
+        .footer-body-social-email__button {
+          font-size: 12px; }
+    .footer-body-logo {
+      padding: 20px 0 20px 0; }
+    .footer-body__title {
+      font-size: 18px;
+      margin-bottom: 20px; }
+    .footer-body__subtitle {
+      font-size: 12px; }
+    .footer-body__place {
+      margin-bottom: 20px; }
+    .footer-body-container {
+      flex-direction: column;
+      align-items: center; }
+      .footer-body-container-address-place__icon {
+        width: 22px;
+        height: 32px;
+        background-size: contain; }
+      .footer-body-container-training-place__icon {
+        width: 32px;
+        height: 32px;
+        background-size: contain; }
+      .footer-body-container-academy {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; }
+        .footer-body-container-academy__subtitle {
+          text-align: center;
+          max-width: 250px;
+          margin-bottom: 20px; }
+        .footer-body-container-academy-place {
+          display: flex;
+          justify-content: flex-start; }
+          .footer-body-container-academy-place__icon--address {
+            width: 22px;
+            height: 32px;
+            background-size: contain; }
+          .footer-body-container-academy-place__icon--email {
+            width: 22px;
+            height: 12px;
+            background-size: contain; }
+          .footer-body-container-academy-place__icon--phone {
+            width: 22px;
+            height: 32px;
+            background-size: contain; } }
 
 /* /footer
 --------------------------------------------------------------------*/
