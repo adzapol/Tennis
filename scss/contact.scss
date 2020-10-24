@@ -1,0 +1,41 @@
+@import 'scss/normalize.scss';
+@import 'scss/style.scss';
+
+// address
+.header--active:before {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 4px;
+    border-radius: 5px;
+    background-color: $color-brand;
+}
+
+.address__body {
+    display: flex;
+    flex-direction: column;
+}
+.address_paragraph {
+    color: $color-link;
+    margin-top: 15px;
+}
+.address_decoration {
+    font-weight: 700;
+    color: $color-brand;
+}
+.address_map {
+    margin-top: 50px;
+}
+.address_maps {
+    width: 1280px;
+}
+@media (max-width: $screen-sm) { // 576px;
+    .address_maps {
+        width: 240px;
+    }
+    .address_title {
+        margin-top: 15px;
+    }
+}
