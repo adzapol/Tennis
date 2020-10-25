@@ -1,0 +1,191 @@
+@import 'scss/style.scss';
+
+.caption__body {
+    margin-top: 40px;
+}
+
+/* search
+--------------------------------------------------------------------*/
+.search-players {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+.search-item {
+    width: 210px;
+    height: 50px;
+    font-size: 14px;
+    position: relative;
+    &__opt {
+        width: inherit;
+        height: inherit;
+        padding-left: 10px;
+        border-radius: 10px;
+        border: 1px solid $color-brand;
+        background-color: $color-popular;
+        
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+    }
+}
+.search-item:not(:first-child) {
+    margin-left: 40px;
+}
+.search-item:not(:last-child):before {
+    content: "";
+    position: absolute;
+    top: 45%;
+    left: 90%;
+    border-style: solid;
+    border-width: 6px 5px 0 5px;
+    border-color: $color-link transparent transparent transparent;
+    pointer-events: none;
+}
+@media (max-width: $screen-md) { // 768px
+    .search-players {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+    .search-item {
+        margin-top: 10px;
+    }
+    .search-item:not(:first-child) {
+        margin-left: 0;
+    }
+}
+/* / search
+--------------------------------------------------------------------*/
+
+/* players-body
+--------------------------------------------------------------------*/
+.players {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+.players-body {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 70%;
+    text-align: center;
+}
+.players-head {
+    display: flex;
+    padding: 10px 0;
+    border-top: 1px solid $color-link;
+    border-bottom: 1px solid $color-link;
+    &__cell-1 {
+        flex-basis: 5%;
+    }
+    &__cell-2 {
+        flex-basis: 40%;
+    }
+    &__cell-3 {
+        flex-basis: 35%;
+    }
+    &__cell-4 {
+        flex-basis: 20%;
+    }
+}
+.players-list {
+    display: flex;
+    flex-direction: column;
+    &-item {
+        display: flex;
+        align-items: center;
+        flex-grow: 1;
+        margin-top: 10px;
+        background-color: $color-popular;
+    }
+    &__content {
+        display: flex;
+    }
+    &__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: left;
+        margin-left: 10px;
+    }
+    &__picture {
+        height: 180px;
+    }
+    &__span {
+        color: $color-brand;
+        font-size: 18px;
+    }
+}
+/* / players-body
+--------------------------------------------------------------------*/
+
+/* players-sidebar
+--------------------------------------------------------------------*/
+.players-sidebar {
+    display: flex;
+    flex-basis: 28%;
+    flex-direction: column;
+    &__title {
+        font-size: 14px;
+        margin-bottom: 40px;
+    }
+}
+.players-post {
+    border: 2px solid $color-link;
+    &__title {
+        font-size: 20px;
+        text-transform: uppercase;
+        padding: 18px 0 18px 26px;
+        color: $color-brand;
+        background-color: $color-popular;
+        border-bottom: 2px solid $color-link;
+    }
+}
+.post {
+    margin: 30px 0;
+    &__title {
+        font-size: 14px;
+        font-weight: 400;
+        margin: 0 15px;
+    }
+    &__time {
+        font-size: 11px;
+        margin: 10px 15px;
+    }
+    &__news {
+        color: $color-brand;
+    }
+    &__line {
+        display: block;
+        width: 90%;
+        height: 1px;
+        margin: 0 15px;
+        background-color: $color-link;
+    }
+}
+.post-popular {
+    margin-top: 40px;
+}
+@media (max-width: $screen-md-m-max) { // 920px
+    .players-body {
+        font-size: 10px;
+        overflow: auto;
+        flex-basis: 100%;
+    }
+    .players-list {
+        &__picture {
+            height: 80px;
+        }
+        &__span {
+            font-size: 12px;
+        }
+    }
+    .players-sidebar {
+        flex-basis: 100%;
+        margin-top: 40px;
+    }
+}
+/* players-sidebar
+--------------------------------------------------------------------*/

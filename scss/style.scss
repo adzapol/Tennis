@@ -92,6 +92,10 @@ h2 {
 .dn {
     display: none;
 }
+:active, :hover, :focus {
+    outline: 0;
+    outline-offset: 0;
+}
 // === / Common ===
 
 .header-content { // внешняя обертка header
@@ -129,6 +133,16 @@ h2 {
     background-color: $color-white;
     opacity: 0.8;
     z-index: 10;
+}
+.header_active:before {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 4px;
+    border-radius: 5px;
+    background-color: $color-brand;
 }
 @media (max-width: $screen-sm) { // 576px;
     .header-content {
@@ -252,7 +266,7 @@ h2 {
             margin-left: 10px;
         }
     }
-    @media (max-width: $screen-sm-max) { // 767px
+    @media (max-width: $screen-md-m-max) { // 920px
         &__arrow {
             top: 30%;
         }
